@@ -11,35 +11,49 @@
 </head>
 
 <body>
+    <!-- progress Bar -->
+    <div id="progress-container">
+        <h4 class="glitch-text">Loading<span class="loading"></span></h4>
+        &nbsp;
+        <div id="progress-bar"></div>
+        <p id="progress-text">0%</p>
+
+    </div>
+
+    <div id="main-content">
     <header>
         <div class="content-fit">
             <div class="logo"><strong>AFTER DRUGS GAMING</strong></div>
             <nav>
                 <ul class="navlinks">
-                    
+
                     <li><a href="#top" class="home-button">Home</a></li>
                     <li><a href="#contact" class="contact-button">Contacts</a></li>
                     <li><a href="https://instagram.com/xar_ino" target="_blank" class="social-icon" style="color: red;">
-                        <i class="fab fa-instagram"></i></a>
+                            <i class="fab fa-instagram"></i></a>
                     </li>
-                    <li><a href="https://www.linkedin.com/in/saptadip-sasmal-563449254/" target="_blank" class="social-icon" style="color: rgb(0, 183, 255);">
-                        <i class="fab fa-linkedin"></i></a>
+                    <li><a href="https://www.linkedin.com/in/saptadip-sasmal-563449254/" target="_blank"
+                            class="social-icon" style="color: rgb(0, 183, 255);">
+                            <i class="fab fa-linkedin"></i></a>
                     </li>
 
                     <button title="Play or Pause" id="play">⏯️</button>
-                    
+
                     <!-- <li>
                         <a href="mailto:sasmalsaptadip84@gmail.com" class="social-icon">
                             <i class="fas fa-envelope"></i>
                         </a>
                     </li> -->
-                    
+
                     <!-- <li>Login</li> -->
                 </ul>
             </nav>
         </div>
     </header>
     <audio id="background-music" src="bgm.mp3"></audio>
+
+    
+        
 
     <div class="section" id="banner">
         <div class="content-fit">
@@ -52,8 +66,13 @@
         <div class="content-fit">
             <div class="number">01</div>
             <div class="des">
-                <div class="title"> <p style="color:rgb(255, 0, 0)">Saptadip</p> - Game Designer & Creator</div>
-                <p>A skilled video game developer, graphics designer, and storyteller with a deep focus on game design. Specializing in Unreal Engine, he excels in level design, creating immersive experiences, and weaving captivating narratives for players. His expertise shapes engaging and innovative game worlds.</p>
+                <div class="title">
+                    <p style="color:rgb(255, 0, 0)">Saptadip</p> - Game Designer & Creator
+                </div>
+                <p>A skilled video game developer, graphics designer, and storyteller with a deep focus on game design.
+                    Specializing in Unreal Engine, he excels in level design, creating immersive experiences, and
+                    weaving captivating narratives for players. His expertise shapes engaging and innovative game
+                    worlds.</p>
             </div>
         </div>
     </div>
@@ -62,25 +81,36 @@
             <div class="number">02</div>
             <div class="des">
                 <div class="title">Live Games</div>
-                <div>
+                <div id="contentlinks">
                     <a href="https://saptadipsasmal.itch.io/adventure-in-vally" target="_blank">
-                        <img src="/img/ss.png" alt="Your Image" width="300">
+                        <img src="/img/ss.png" alt="Your Image" width="300" height="200">
                     </a>
-                        <h4 ><a href="https://saptadipsasmal.itch.io/adventure-in-vally" target="_blank" style="color: rgb(16, 204, 16); text-decoration: none;">
-                            ADVENTURE IN VALLEY
+                    <h4><a href="https://saptadipsasmal.itch.io/adventure-in-vally" target="_blank"
+                            style="color: rgb(16, 204, 16); text-decoration: none;">
+                           => ADVENTURE IN VALLEY
+                        </a></h4>
+                
+                    <a href="https://saptadipsasmal.itch.io/endless-pixel-run" target="_blank">
+                        <img src="/img/pixelrun.png" alt="Your Image" width="300" height="200">
+                    </a>
+                    <h4><a href="https://saptadipsasmal.itch.io/endless-pixel-run" target="_blank"
+                            style="color: rgb(16, 204, 16); text-decoration: none;">
+                            => Endless Pixel Run
                         </a></h4>
                 </div>
-                
-                <p>Get ready for more thrilling adventures! Stay tuned as I continue to work on upcoming games, new features, and exciting updates. Follow my journey and be the first to know when new releases drop. Don't miss out on the next big thing in gaming! <br>
-                     <h4 style="color:rgb(218, 23, 9)"><strong>Upcoming ...</strong></h4>
-                     <h4  style="color:rgb(154, 243, 39)"><strong>-> WAVE 3</strong></h4>
-              </p>
+
+                <p>Get ready for more thrilling adventures! Stay tuned as I continue to work on upcoming games, new
+                    features, and exciting updates. Follow my journey and be the first to know when new releases drop.
+                    Don't miss out on the next big thing in gaming! <br>
+                <h4 style="color:rgb(218, 23, 9)"><strong>Upcoming ...</strong></h4>
+                <h4 style="color:rgb(154, 243, 39)"><strong>-> WAVE 3</strong></h4>
+                </p>
                 </p>
             </div>
         </div>
         <img src="img/leaf1.png" class="decorate" alt="" style="width: 70vw; bottom: 0; right: 0; z-index: 101;">
     </div>
-    <div class="section" id="contact" >
+    <div class="section" id="contact">
         <div class="content-fit">
             <div class="number">03</div>
             <div class="des">
@@ -94,46 +124,27 @@
                         <td>Phone</td>
                         <td>+91 78108 51061</td>
                     </tr>
-                   
+
                 </table>
                 <div class="sign">Saptadip Sashmal</div>
-                <div class="admin">Created by <a target="_blank" href="https://instagram.com/bong_ani_007">Anirban Sarkar</a></div>
+                <div class="admin">Created by <a target="_blank" href="https://instagram.com/bong_ani_007">Anirban
+                        Sarkar</a></div>
             </div>
         </div>
     </div>
-    
-    <script>
-        const btn = document.getElementById("play")
-        btn.addEventListener('click', (() => {
-            const music = document.getElementById('background-music');
-            let isPlaying = false;
-        
-            return () => {
-                if (isPlaying) {
-                    music.pause();
-                } else {
-                    music.play();
-                }
-                isPlaying = !isPlaying;
-            };
-        })());
-        
-        document.addEventListener('mousehover',()=>{
+    </div>
 
-        })
 
-        document.addEventListener('dblclick', function() {
-            if (!document.fullscreenElement) {
-                document.documentElement.requestFullscreen();
-            } else {
-                document.exitFullscreen();
-            }
-        });
-    </script>
-    
+
+
+
+
+
+
 </body>
 
 
 <div id="container3D"></div>
 <script type="module" src="/src/main.js"></script>
+
 </html>

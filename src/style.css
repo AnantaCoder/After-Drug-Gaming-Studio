@@ -3,6 +3,120 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap');
 
 
+
+/*font*/
+.glitch-text {
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    text-shadow: 
+      0.05em 0 0 rgba(255,0,0,.75),
+      -0.025em -0.05em 0 rgba(0,255,0,.75),
+      0.025em 0.05em 0 rgba(0,0,255,.75);
+    animation: glitch 500ms infinite;
+  }
+
+  @keyframes glitch {
+    0% {
+      text-shadow: 
+        0.05em 0 0 rgba(255,0,0,.75),
+        -0.05em -0.025em 0 rgba(0,255,0,.75),
+        0.025em 0.05em 0 rgba(0,0,255,.75);
+    }
+    14% {
+      text-shadow: 
+        0.05em 0 0 rgba(255,0,0,.75),
+        -0.05em -0.025em 0 rgba(0,255,0,.75),
+        0.025em 0.05em 0 rgba(0,0,255,.75);
+    }
+    15% {
+      text-shadow: 
+        -0.05em -0.025em 0 rgba(255,0,0,.75),
+        0.025em 0.025em 0 rgba(0,255,0,.75),
+        -0.05em -0.05em 0 rgba(0,0,255,.75);
+    }
+    49% {
+      text-shadow: 
+        -0.05em -0.025em 0 rgba(255,0,0,.75),
+        0.025em 0.025em 0 rgba(0,255,0,.75),
+        -0.05em -0.05em 0 rgba(0,0,255,.75);
+    }
+    50% {
+      text-shadow: 
+        0.025em 0.05em 0 rgba(255,0,0,.75),
+        0.05em 0 0 rgba(0,255,0,.75),
+        0 -0.05em 0 rgba(0,0,255,.75);
+    }
+    99% {
+      text-shadow: 
+        0.025em 0.05em 0 rgba(255,0,0,.75),
+        0.05em 0 0 rgba(0,255,0,.75),
+        0 -0.05em 0 rgba(0,0,255,.75);
+    }
+    100% {
+      text-shadow: 
+        -0.025em 0 0 rgba(255,0,0,.75),
+        -0.025em -0.025em 0 rgba(0,255,0,.75),
+        -0.025em -0.05em 0 rgba(0,0,255,.75);
+    }
+  }
+
+  .loading::after {
+    content: '';
+    animation: dots 2s steps(4, end) infinite;
+  }
+
+  @keyframes dots {
+    0%, 20% { content: ''; }
+    40% { content: '.'; }
+    60% { content: '..'; }
+    80% { content: '...'; }
+  }
+/*
+for progress bar 
+*/
+
+
+
+
+#progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#progress-bar {
+    width: 0;
+    height: 10px;
+    background: linear-gradient(90deg, #ccff00, #39ff14, #7fff00);
+    transition: width 0.1s ease-in-out;
+}
+
+#progress-text {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 0 0 5px #ff006e;
+}
+
+#main-content {
+    display: none;
+    
+}
+
+
+
+
+/* end progress bar */
 body {
     margin: 0;
     font-family: "Montserrat", sans-serif;
@@ -11,7 +125,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     background-image:
-    url(/public/img/game.jpg),
+    url(/img/game.jpg),
     repeating-linear-gradient(
         to right, transparent 0 500px, #73814B33 500px 501px
     );
@@ -56,7 +170,7 @@ header {
     width: 100%;
     z-index: 10px;
     backdrop-filter: blur(20px);
-    z-index: 100;
+    z-index: 1000;
     background-color: #1B1B1B11;
     background-image: repeating-linear-gradient(
         to right, transparent 0 500px, #eee1 500px 501px
@@ -254,16 +368,37 @@ html {
         position: absolute;
     }
 }
-/* Responsive Logo Styling for smaller screens */
+
 @media screen and (max-width: 1024px) {
     .logo {
-        font-size: 0.8em; /* Slightly smaller for tablet-sized screens */
+        font-size: 0.8em; 
     }
 }
+#contentlinks {
+    
+    max-width: fit-content;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(5px); 
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+}
+
+#contentlinks:hover {
+    transform: scale(1.1);
+    background: rgba(157, 32, 206, 0.2); 
+    backdrop-filter: blur(15px); 
+    color: white; 
+}
+
+
+
 
 @media screen and (max-width: 767px) {
     .logo {
-        font-size: 0.8em; /* Even smaller for mobile-sized screens */
+        font-size: 0.8em; 
     }
     .navlinks a{
         font-size: 0.8em;
